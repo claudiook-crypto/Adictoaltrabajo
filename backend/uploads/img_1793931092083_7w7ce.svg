@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Degradado elegante para el fondo -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Degradado brillante para el maletín -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <!-- Sombra sutil -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo del logo -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+
+  <!-- Círculo contenedor del ícono con sombra -->
+  <circle cx="256" cy="205" r="85" fill="#0b0f19" filter="url(#shadow)" />
+
+  <!-- Maletín Profesional Estilizado -->
+  <g transform="translate(206, 155) scale(2.2)" fill="none" stroke="url(#blueGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="10" width="35" height="24" rx="4" />
+    <path d="M15 10V7a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v3" />
+    <line x1="5" y1="20" x2="40" y2="20" />
+  </g>
+
+  <!-- Tipografía: "ADICTO" -->
+  <text x="256" y="340" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="34" fill="#ffffff" letter-spacing="4" text-anchor="middle">ADICTO</text>
+
+  <!-- Tipografía: "AL TRABAJO" con color de acento -->
+  <text x="256" y="380" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="22" fill="#3b82f6" letter-spacing="6" text-anchor="middle">AL TRABAJO</text>
+</svg>

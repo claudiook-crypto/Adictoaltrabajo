@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const notifications_controller_1 = require("../controllers/notifications.controller");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const router = (0, express_1.Router)();
+router.get('/mis', auth_middleware_1.authenticate, notifications_controller_1.getMisNotificaciones);
+router.patch('/:id/read', auth_middleware_1.authenticate, notifications_controller_1.marcarLeida);
+router.patch('/read-all', auth_middleware_1.authenticate, notifications_controller_1.marcarTodasLeidas);
+router.post('/sugerencia', auth_middleware_1.authenticate, notifications_controller_1.enviarSugerencia);
+exports.default = router;

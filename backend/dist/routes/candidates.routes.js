@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const candidates_controller_1 = require("../controllers/candidates.controller");
+const auth_middleware_1 = require("../middleware/auth.middleware");
+const router = (0, express_1.Router)();
+router.get('/search', auth_middleware_1.authenticate, candidates_controller_1.searchCandidates);
+router.get('/for-offer/:offerId', auth_middleware_1.authenticate, candidates_controller_1.getCandidatesForOffer);
+router.post('/postular', auth_middleware_1.authenticate, candidates_controller_1.postularAOferta);
+router.get('/oferente/:id', auth_middleware_1.authenticate, candidates_controller_1.getPerfilOferente);
+exports.default = router;
